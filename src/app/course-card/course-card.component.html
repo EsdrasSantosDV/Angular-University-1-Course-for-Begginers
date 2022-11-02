@@ -1,11 +1,12 @@
-<div class="course-card" *ngIf="course else noCourse">
-
-  <div class="course-title">
+<!--NG CLASS PARA ALTERAR O COMPORTAMENTO VISUAL DO TEMPLATE DE ACORDO COM O DATA, POR EXEMPLO SE O COURSE FOR DE INICIANTE O VISUAL DO CARD DO CURSO FICA DIFERNETE-->
+<div class="course-card" *ngIf="course else noCourse" [ngClass]="cardClasses()">
+  <div class="course-title" [ngStyle]="cardStyles()">
     {{ cardIndex +' '+course.description}}
   </div>
   <img width="300" alt="Angular Logo" *ngIf="isImageVisible();else noImage "
        [src]="course.iconUrl">
 
+<!--  ESSE TEMPLATE VAI SER SOMENTE RENDERIZADO SE A IMAGE EXISTER-->
   <ng-template #noImage>
     <p>No image is Avaliable</p>
   </ng-template>
