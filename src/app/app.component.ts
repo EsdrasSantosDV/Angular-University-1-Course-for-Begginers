@@ -8,11 +8,10 @@ import {Course} from './model/course';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  coreCourse= COURSES[0];
 
-  rxjsCourse=COURSES[1];
+  //LISTA DE CURSOS PARA SER ITERADA
+  courses=COURSES;
 
-  ngrxCourse=COURSES[2];
 
   onCourseSelected(course:Course) {
     console.log("App component - course selected",course);
