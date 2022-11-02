@@ -41,6 +41,6 @@ export class CourseCardComponent implements OnInit {
 
   cardStyles() {
    return {
-     'background-color':'white'};
+     'font-size':'30px'};
   }
 }
